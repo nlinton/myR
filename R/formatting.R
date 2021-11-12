@@ -16,4 +16,6 @@ getmax <- \(x,digit) { plyr::round_any(max(x), digit, f=ceiling) }
 #'
 #' @param date input is a date
 #' @export
-yyyymmdd <- \(date) paste0(sprintf("%04d-",year(ymd(date))),sprintf("%02d-",month(ymd(date))),(sprintf("%02d",day(ymd(date)))))
+yyyymmdd <- \(date) { paste0(sprintf("%04d-", year(ymd(date))),
+                           sprintf("%02d-", month(ymd(date))),
+                           sprintf("%02d", day(ymd(date)))) }
